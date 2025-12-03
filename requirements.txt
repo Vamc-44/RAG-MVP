@@ -1,0 +1,11 @@
+pandas
+pytesseract
+fastapi
+faiss-cpu
+uvicorn
+python-multipart
+sentence-transformers
+transformers
+pymupdf
+opencv-python
+rich
