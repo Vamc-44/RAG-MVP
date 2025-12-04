@@ -50,19 +50,6 @@ python test_pdf_extraction.py
 python test_pOCR.py
 ```
 
-- Environment setup
-- OCR setup and testing
-- PDF/Text/Image extraction
-- Chunking
-- Embeddings
-- FAISS vector storage
-
-More steps will be added later as the project grows.
-
----
-
-## 🚀 Completed so far (Step 1 & Step 2)
-
 ### ✔ Step 1 — Environment + OCR Setup
 
 - Created a Python virtual environment (`.venv`)
