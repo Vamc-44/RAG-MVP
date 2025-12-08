@@ -8,4 +8,3 @@ text = pytesseract.image_to_string(image)
 print("-------------OCR Result-------------")
 print(text)
 print("------------------------------------")
-
