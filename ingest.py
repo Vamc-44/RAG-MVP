@@ -11,9 +11,9 @@ import os
 # ------------------------
 def extract_text_from_pdf(file_path):
     doc = fitz.open(file_path)
-    full_text = []
+    pages = []
 
-    for page in doc:
+    for i, page in enumerate(doc):
         text = page.get_text()
 
         # If text is empty (scanned PDF), fallback to OCR
@@ -22,9 +22,13 @@ def extract_text_from_pdf(file_path):
             img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
             text = pytesseract.image_to_string(img)
 
-        full_text.append(text)
+        pages.append({
+            "file_name": os.path.basename(file_path),
+            "page_number": i + 1,
+            "content": text.strip()
+        })
 
-    return "\n".join(full_text)
+    return pages
 
 
 # ------------------------
